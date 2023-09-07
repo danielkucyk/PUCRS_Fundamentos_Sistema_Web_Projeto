@@ -9,7 +9,7 @@ Não é necessário pré-instalar nenhuma dependência.
 ### Clonando o repositório:
 
 ```
-git clone https://github.com/danielkucyk/ProjectMark_Test.git
+git clone https://github.com/danielkucyk/PUCRS_Fundamentos_Sistema_Web_Projeto.git
 ```
 
 ### Executando a aplicação:
