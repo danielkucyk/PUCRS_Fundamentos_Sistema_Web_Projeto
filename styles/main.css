@@ -1,0 +1,236 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(https://s3-alpha-sig.figma.com/img/17cb/0690/2a92a96d8732410648781a6e00d0fcc3?Expires=1693785600&Signature=LnFbVdr5j0OoYFyr3hK0djlpdwmM9mXfCBli-WL7mhK4bIZ3qkvRC8WT5q1TK4ZHwiI0LtxGj9lyFcGDIQbOfZ1uuX245qa8oB~b~7qU47M~zeWFmbrmdU4rZNs~nPUKgbgv~J8D03ruCHoPxfLpFDN4OsYzyOoJf0kHXokNWa37wQheyUFoC~zYK9dV5zQRbhL45OykCQ9pbMzJcrplVH6Zzp16fHHTvzwgAwqRE3NxLkH8jLX6WkerihVQpADr9ELoo3cUyDUS977~7FXK3wRQXJ5~5uMdXFWPCh~yV5mU6fqSvDW32Phq~jOBy45XP4nHQTFZb5RX-fk9kEizOA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top; 
+}
+  
+header {
+    background-color: #FFFFFF;
+    color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    align-items: center;
+    border-radius: 0px 0px 50px 50px;
+    border-bottom: 0.5px solid #D49940;
+    background: var(--text-color-secondary, #FFF);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    width: 240px;
+    height: 68px;
+    justify-content: start;
+    align-items: start;
+    flex-shrink: 0;
+}
+
+.logo_title{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    transform: translateX(-70%);
+    width: 58px;
+    height: 16px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+.logo_frame{
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 64.306px;
+    height: 67.215px;
+    flex-shrink: 0; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li:last-child {
+    margin-right: 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2D2D2D;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: #D49940;
+}
+
+@media screen and (max-width: 768px) {
+header {
+    padding: 0.5rem;
+}
+
+nav ul li {
+    margin-right: 0.5rem;
+}
+}
+
+.menuconta[hidden]{
+    display: none;
+}
+
+.menuconta {
+    width: 240px;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: #D49940;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    gap: 5px;
+    opacity: 80%;
+}
+
+.menuconta a{
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    color: #D49940;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    gap: 5px;
+    opacity: 80%;
+}
+
+.menuconta a:hover {
+    opacity: 100%;
+    font-weight: bold;
+}
+
+.login[hidden] {
+    display: none;
+}
+
+.login {
+    width: 240px;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: #D49940;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    gap: 5px;
+    opacity: 80%;
+}
+
+.login a{
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    color: #D49940;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    gap: 5px;
+    opacity: 80%;
+}
+
+.login a:hover {
+    opacity: 100%;
+    font-weight: bold;
+}
+
+.anuncio_container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.anuncio {
+    display: flex;
+    width: 878px;
+    height: 501px;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 6px 20px 5px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: 0.15s ease-in-out;
+}
+
+.anuncio:hover {
+    scale: 1.01;
+}
+
+.anuncio_texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.anuncio_header {
+    width: 420px;
+    height: 148px;
+    flex-shrink: 0;
+    color: #D49940;
+    font-family: Prompt;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 10px;
+    margin-top: 28px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+
+.anuncio_descricao {
+    margin-top: 41px;
+    margin-left: 10px;
+    width: 398px;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.anuncio_bold {
+    color: #D49904;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.anuncio_arrow {
+    width: 42.119px;
+    height: 42.557px;
+    transition: 0.15s ease-in-out;
+}
+
+.anuncio_arrow:hover {
+    scale: 1.1;
+}
+

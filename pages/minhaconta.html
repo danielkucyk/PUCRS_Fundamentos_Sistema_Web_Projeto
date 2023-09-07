@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/minhaconta.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Pet Shop E-Commerce</title>
+</head>
+
+<body onload = checkAcesso()>
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <svg class="logo_frame" width="65" height="68" viewBox="0 0 65 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.1977 0C49.5631 0 64.4513 15.0467 64.4513 33.6074C64.4513 52.1682 49.5631 67.2149 31.1977 67.2149C17.034 67.2149 4.93845 58.2654 0.145203 45.6566H1.07904C5.82736 57.7694 17.5226 66.3358 31.1977 66.3358C49.0828 66.3358 63.5815 51.6828 63.5815 33.6074C63.5815 15.532 49.0828 0.879068 31.1977 0.879068C17.5229 0.879068 5.82736 9.44543 1.07904 21.5582H0.145203C4.93845 8.94948 17.0338 0 31.1977 0V0Z" fill="#D59940"/>
+        </svg>
+        <span class="logo_title">PetShop</span> 
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="./produtos.html">Produtos</a></li>
+        <li><a href="./servicos.html">Serviços</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="menuconta" id="menuconta" hidden>
+      <a href="#">Carrinho (0)</a>
+      <a href="./minhaconta.html">Minha Conta<i class="fas fa-user"></i></a>
+    </div>
+    <div class="login" id="login">
+      <a href="./login.html">Acesso / Cadastro<i class="fas fa-user"></i></a>
+    </div>
+  </header>
+  
+  <main>
+    <div class="sidebar">
+        <a href="./minhaconta.html" class="dados_perfil">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_198)">
+                    <path d="M26.3625 16.9125L28.0875 18.6375L11.1 35.625H9.375V33.9L26.3625 16.9125ZM33.1125 5.625C32.6437 5.625 32.1562 5.8125 31.8 6.16875L28.3687 9.6L35.4 16.6312L38.8312 13.2C39.5625 12.4688 39.5625 11.2875 38.8312 10.5563L34.4438 6.16875C34.0688 5.79375 33.6 5.625 33.1125 5.625ZM26.3625 11.6063L5.625 32.3438V39.375H12.6562L33.3937 18.6375L26.3625 11.6063Z" fill="#2D2D2D"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_6_198">
+                        <rect width="45" height="45" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <span>Minha Conta</span>
+        </a>
+        <a href="./meuspets.html" class="meus pets">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_361)">
+                    <path d="M20 9.24625L28.3333 16.5587V29.25H25V19.5H15V29.25H11.6666V16.5587L20 9.24625ZM20 4.875L3.33331 19.5H8.33331V32.5H18.3333V22.75H21.6666V32.5H31.6666V19.5H36.6666L20 4.875Z" fill="#2D2D2D"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_6_361">
+                        <rect width="45" height="45" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg> 
+            <span>Meus Pets</span>
+        </a>
+        <button type="button" onclick=desconectar()>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_965)">
+                    <path d="M5.83331 30.8167L15.8333 20.8L22.5 27.4667L36.6666 11.5333L34.3166 9.18332L22.5 22.4667L15.8333 15.8L3.33331 28.3167L5.83331 30.8167Z" fill="#EB001B" fill-opacity="0.54"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_6_965">
+                     <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg> 
+            <span>Desconectar</span>
+        </button>
+    </div>
+    <div class="vertical"></div>
+    <div class="profileinfo">
+        <span class="title">Minha Conta</span>
+        <div class="nome">
+            <span>Nome</span>
+            <div class="nome_box">
+                <div>
+                    <span>Fulano Exemplo</span>
+                </div>
+                <a href="#">Editar</a>
+            </div>
+        </div>
+        <div class="email">
+            <span>Email</span>
+            <div class="email_box">
+                <div>
+                    <span>fulano@teste.com.br</span>
+                </div>
+                <a href="#">Editar</a>
+            </div>
+        </div>
+        <div class="endereco">
+            <span>Endereço</span>
+            <div class="endereco_box">
+                <div>
+                    <span>Rua Exemplo, 111</span>
+                </div>
+                <a href="#">Editar</a>
+            </div>
+        </div>
+        <a href="#">Editar Senha</a>
+    </div>
+    
+  </main>
+
+  <script src="../scripts/script.js"></script>
+</body>
+</html>

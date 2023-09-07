@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/contato.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Pet Shop E-Commerce</title>
+</head>
+
+<body onload = checkAcesso()>
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <svg class="logo_frame" width="65" height="68" viewBox="0 0 65 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.1977 0C49.5631 0 64.4513 15.0467 64.4513 33.6074C64.4513 52.1682 49.5631 67.2149 31.1977 67.2149C17.034 67.2149 4.93845 58.2654 0.145203 45.6566H1.07904C5.82736 57.7694 17.5226 66.3358 31.1977 66.3358C49.0828 66.3358 63.5815 51.6828 63.5815 33.6074C63.5815 15.532 49.0828 0.879068 31.1977 0.879068C17.5229 0.879068 5.82736 9.44543 1.07904 21.5582H0.145203C4.93845 8.94948 17.0338 0 31.1977 0V0Z" fill="#D59940"/>
+        </svg>
+        <span class="logo_title">PetShop</span> 
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="./produtos.html">Produtos</a></li>
+        <li><a href="./servicos.html">Serviços</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="menuconta" id="menuconta" hidden>
+      <a href="#">Carrinho (0)</a>
+      <a href="./minhaconta.html">Minha Conta<i class="fas fa-user"></i></a>
+    </div>
+    <div class="login" id="login">
+      <a href="./login.html">Acesso / Cadastro<i class="fas fa-user"></i></a>
+    </div>
+  </header>
+  
+  <main>
+    <div class="contato_container">
+        <span class="contato_title">E-PetShop</span>
+        <img src="https://s3-alpha-sig.figma.com/img/0c4f/a644/eafc427a08130e45d5d04b4c804aaf0f?Expires=1694390400&Signature=XqKgFRgL2fVzwrY7YYkHDok~6OII3xIFCa4~7~iKjn99Z1r-9CGkBMgW5iR~EegDpxpVcznXezzceC-4sLaY~zaGdJkYcfJqO5e7Y9vXdv~gyoQbJeBv2DtXTX5QclSioL~NJN0gjTOFBd713Z4sbLu4jko6J-jmKyKMerY0Tv6ZtWl52r~oaIeDSnDMP6njDWhtCGA9mMIGAPjF7JrD8l1ecAp6brdLbCjq-xa6IUz0oTJ~Bq6zI6chribWyXdN2WtpKcfTGpHxJlgk0ATRPy5j5rLVw6NcBPrK8WtpOav58CYZu1vDiu4TgQnT0Q~s~jnLpRnHf2FlA3GsoQwxjA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" 
+            width="617px"
+            height="254px"
+            alt="workplace">
+        
+        <div class="contato_info">
+            <span class="contato_cidade">Cidade Exemplo - Rua do Exemplo, 100</span>
+            <span class="contato_tel">Tel: (DDD) 99999-9999</span>
+            <div>
+                <span class="contato_email">Email:</span>
+                <a href="mailto:e-petshop@exemplo.com">e-petshop@exemplo.com.br</a>
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <script src="../scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/produtos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Pet Shop E-Commerce</title>
+</head>
+
+<body onload = checkAcesso()>
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <svg class="logo_frame" width="65" height="68" viewBox="0 0 65 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.1977 0C49.5631 0 64.4513 15.0467 64.4513 33.6074C64.4513 52.1682 49.5631 67.2149 31.1977 67.2149C17.034 67.2149 4.93845 58.2654 0.145203 45.6566H1.07904C5.82736 57.7694 17.5226 66.3358 31.1977 66.3358C49.0828 66.3358 63.5815 51.6828 63.5815 33.6074C63.5815 15.532 49.0828 0.879068 31.1977 0.879068C17.5229 0.879068 5.82736 9.44543 1.07904 21.5582H0.145203C4.93845 8.94948 17.0338 0 31.1977 0V0Z" fill="#D59940"/>
+        </svg>
+        <span class="logo_title">PetShop</span> 
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="./produtos.html">Produtos</a></li>
+        <li><a href="./servicos.html">Serviços</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="menuconta" id="menuconta" hidden>
+      <a href="#">Carrinho (0)</a>
+      <a href="./minhaconta.html">Minha Conta<i class="fas fa-user"></i></a>
+    </div>
+    <div class="login" id="login">
+      <a href="./login.html">Acesso / Cadastro<i class="fas fa-user"></i></a>
+    </div>
+  </header>
+  
+  <main>
+    <div class="filter_container">
+        <div class="filter_search">
+            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.2265 0.0309696C5.03588 0.0309696 0 4.8932 0 10.8703C0 16.8475 5.03588 21.7097 11.2265 21.7097C13.119 21.7097 14.9793 21.2761 16.5511 20.44C16.6769 20.5862 16.8165 20.721 16.968 20.8426L20.1756 23.9395C20.4718 24.2613 20.833 24.5212 21.2369 24.7034C21.6409 24.8855 22.0792 24.986 22.5249 24.9986C22.9705 25.0113 23.4142 24.9359 23.8286 24.777C24.2429 24.6181 24.6193 24.3792 24.9346 24.0748C25.2499 23.7704 25.4974 23.407 25.6619 23.0069C25.8265 22.6068 25.9046 22.1784 25.8914 21.7481C25.8783 21.3179 25.7743 20.8947 25.5856 20.5046C25.397 20.1146 25.1278 19.7659 24.7945 19.4799L21.5869 16.3829C21.4307 16.232 21.2587 16.0971 21.0737 15.9803C21.9398 14.4628 22.4851 12.6975 22.4851 10.8394C22.4851 4.86223 17.4492 0 11.2586 0L11.2265 0.0309696ZM11.2265 3.12793C15.685 3.12793 19.2454 6.56556 19.2454 10.8703C19.2454 12.9143 18.4756 14.8035 17.1284 16.1971C17.0963 16.2281 17.0643 16.2591 17.0322 16.29C16.8807 16.4116 16.7411 16.5463 16.6152 16.6926C15.2039 17.9314 13.2793 18.6437 11.1944 18.6437C6.73589 18.6437 3.17549 15.2061 3.17549 10.9013C3.17549 6.59653 6.73589 3.1589 11.1944 3.1589L11.2265 3.12793Z" fill="#D49904" fill-opacity="0.5"/>
+            </svg>
+            <input type="text" id="filter" placeholder="Pesquise">
+        </div>
+
+        <div class="filter_caes">
+            <input type="checkbox" id="filter_caes">
+            <label for="filter_caes"> Cães </label>
+        </div>
+
+        <div class="filter_gatos">
+            <input type="checkbox" id="filter_gatos">
+            <label for="filter_gatos"> Gatos </label>
+        </div>
+
+        <div class="filter_ate5">
+            <input type="checkbox" id="filter_ate5">
+            <label for="filter_ate5"> Até 5kg </label>
+        </div>
+
+        <div class="filter_5a10">
+            <input type="checkbox" id="filter_5a10">
+            <label for="filter_5a10"> De 5kg a 10kg </label>
+        </div>
+
+        <div class="filter_10a15">
+            <input type="checkbox" id="filter_10a15">
+            <label for="filter_10a15"> De 10kg a 15kg </label>
+        </div>
+
+        <div class="filter_15ouMais">
+            <input type="checkbox" id="filter_15ouMais">
+            <label for="filter_15ouMais"> 15kg ou mais </label>
+        </div>
+
+        <div class="filter_precoMin">
+            <input type="checkbox" id="filter_precoMin">
+            <label for="filter_precoMin"> Preço Min </label>
+            <input type="number" placeholder="Min" id="precoMin" min="0">
+        </div>
+
+        <div class="filter_precoMax">
+            <input type="checkbox" id="filter_precoMax">
+            <label for="filter_precoMax"> Preço Máx </label>
+            <input type="number" placeholder="Máx" id="precoMax" min="0">
+        </div>
+
+        <button type="button" value="filtrar" class="botao_filtrar" onclick="filtrar()"> Filtrar </button>
+    </div>
+    <div class="produtos_container">
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Seca p/ Cães até 5kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 99,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Seca p/ Cães de 5kg a 10kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 109,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Seca p/ Cães de 10kg a 15kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 119,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Seca p/ Cães de 15kg ou mais </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 129,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Úmida p/ Cães até 5kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 104,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Úmida p/ Cães de 5kg a 10kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 114,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Úmida p/ Cães de 10kg a 15kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 124,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Úmida p/ Cães de 15kg ou mais </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 134,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Seca p/ Gatos até 5kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 89,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Seca p/ Gatos de 5kg a 10kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 99,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Seca p/ Gatos de 10kg ou mais </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 109,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Úmida p/ Gatos até 5kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 94,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Úmida p/ Gatos de 5kg a 10kg </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 104,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+        <div class="produto">
+            <img src="../images/produto_template.jpg" alt="imagem do produto">
+            <span class="produto_title"> Ração Úmida p/ Gatos de 10kg ou mais </span>
+            <span class="produto_descricao"> Descrição da composição e ingredientes. </span>
+            <span class="produto_preco"> R$ <span> 114,90 </span></span>
+            <button type="button" onclick="adicionaCarrinho()"> Adicionar ao Carrinho </button>
+        </div>
+    </div>
+  </main>
+
+  <script src="../scripts/script.js"></script>
+  <script src="../scripts/produtos.js"></script>
+</body>
+</html>
